@@ -14,7 +14,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(
+      await fetch(
         `https://booking-app-brre.onrender.com/changeBooking/${index}`,
         {
           method: "PUT",

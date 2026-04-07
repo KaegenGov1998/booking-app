@@ -11,7 +11,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(
+      await fetch(
         "https://booking-app-brre.onrender.com/book",
         {
           method: "POST",
