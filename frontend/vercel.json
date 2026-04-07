@@ -1,6 +1,9 @@
 {
-  "buildCommand": "GENERATE_SOURCEMAP=false react-scripts build",
+  "framework": "create-react-app",
+  "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "devCommand": "react-scripts start",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "env": {
+    "REACT_APP_API_URL": "https://booking-app-brre.onrender.com"
+  }
 }
