@@ -6,7 +6,7 @@ const App = () => {
   const [backendData, setBackendData] = useState([{}]);
 
   useEffect(() => {
-    fetch("https://booking-app-brre.onrender.com/bookings")
+    fetch(`${process.env.REACT_APP_API_URL}/bookings`)
       .then((response) => response.json())
       .then((data) => {
         setBackendData(data);
@@ -15,7 +15,7 @@ const App = () => {
 
   const deleteBooking = async (index) => {
     try {
-      const response = await fetch(`https://booking-app-brre.onrender.com/booking/${index}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/${index}`, {
         method: "DELETE",
       });
       const data = await response.json();

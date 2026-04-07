@@ -7,7 +7,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https:/booking-app-brre.onrender.com/book", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}book`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
