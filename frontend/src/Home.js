@@ -15,7 +15,7 @@ const App = () => {
 
   const deleteBooking = async (index) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/${index}`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/${index}`, {
         method: "DELETE",
       });
       const data = await response.json();
