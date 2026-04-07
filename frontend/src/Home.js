@@ -5,7 +5,7 @@ const App = () => {
   const [backendData, setBackendData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/bookings")
+    fetch("https://booking-app-brre.onrender.com/bookings")
       .then((response) => response.json())
       .then((data) => {
         setBackendData(data);
@@ -14,7 +14,7 @@ const App = () => {
 
   const deleteBooking = async (index) => {
     try {
-      const response = await fetch(`/booking/${index}`, {
+      const response = await fetch(`https://booking-app-brre.onrender.com/booking/${index}`, {
         method: "DELETE",
       });
       const data = await response.json();

@@ -10,7 +10,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`/changeBooking/${index}`, {
+      const response = await fetch(`https://booking-app-brre.onrender.com/changeBooking/${index}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
