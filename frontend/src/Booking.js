@@ -11,7 +11,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      await fetch(
+      const response = await fetch(
         "https://booking-app-brre.onrender.com/book",
         {
           method: "POST",
@@ -42,26 +42,27 @@ const Booking = () => {
       >
         <h1>Add Booking</h1>
 
-        <div className="w-full flex justify-around gap-3">
-          <input
-            type="text"
-            placeholder="Name"
-            onChange={(e) =>
-              setFormData({ ...formData, name: e.target.value })
-            }
-            className="w-[300px] bg-[#F4F0EA] rounded-md"
-          />
+        <input
+          type="text"
+          placeholder="Name"
+          onChange={(e) =>
+            setFormData({ ...formData, name: e.target.value })
+          }
+        />
 
-          <input
-            type="date"
-            onChange={(e) =>
-              setFormData({ ...formData, date: e.target.value })
-            }
-            className="w-[300px] bg-[#F4F0EA] rounded-md"
-          />
-        </div>
+        <input
+          type="date"
+          onChange={(e) =>
+            setFormData({ ...formData, date: e.target.value })
+          }
+        />
 
-        {/* Keep your radio buttons as-is (they are fine) */}
+        <input
+          type="time"
+          onChange={(e) =>
+            setFormData({ ...formData, time: e.target.value })
+          }
+        />
 
         <button type="submit">Send Data</button>
       </form>

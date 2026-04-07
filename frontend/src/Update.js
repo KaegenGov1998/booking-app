@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
-const Booking = () => {
+const Update = () => {
   const [formData, setFormData] = useState({
     name: "",
     date: "",
@@ -14,7 +14,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      await fetch(
+      const response = await fetch(
         `https://booking-app-brre.onrender.com/changeBooking/${index}`,
         {
           method: "PUT",
@@ -60,10 +60,17 @@ const Booking = () => {
           }
         />
 
+        <input
+          type="time"
+          onChange={(e) =>
+            setFormData({ ...formData, time: e.target.value })
+          }
+        />
+
         <button type="submit">Update</button>
       </form>
     </div>
   );
 };
 
-export default Booking;
+export default Update;

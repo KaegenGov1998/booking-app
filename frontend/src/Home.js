@@ -13,7 +13,7 @@ const App = () => {
 
   const deleteBooking = async (index) => {
     try {
-      const response = await fetch(
+      await fetch(
         `https://booking-app-brre.onrender.com/booking/${index}`,
         {
           method: "DELETE",
