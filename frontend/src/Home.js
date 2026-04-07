@@ -47,7 +47,7 @@ const App = () => {
                 </div>
                 <div className="
                     flex
-                    flex-col"
+                    flex-col ml-5"
                   >
                     <div className="text-[#611201]">Time</div>
                     <div className="font-semibold">{bookings.time}</div>
