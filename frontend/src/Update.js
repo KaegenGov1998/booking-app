@@ -10,7 +10,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/${index}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/changeBooking/${index}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

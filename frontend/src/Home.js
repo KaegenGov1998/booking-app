@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -15,7 +14,7 @@ const App = () => {
 
   const deleteBooking = async (index) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/${index}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/booking/${index}`, {
         method: "DELETE",
       });
       const data = await response.json();
@@ -42,12 +41,12 @@ const App = () => {
                 <div className="flex flex-row w-full bg-slate-300 items-stretch">
                   <div
                     className="flex flex-col ">
-                    <div className="text-[#611201]">Date</div>
-                <div className="font-semibold">{bookings.date}</div>
+                    <div className="text-[#611201] mr-4">Date</div>
+                <div className="font-semibold mr-4">{bookings.date}</div>
                 </div>
                 <div className="
                     flex
-                    flex-col ml-5"
+                    flex-col"
                   >
                     <div className="text-[#611201]">Time</div>
                     <div className="font-semibold">{bookings.time}</div>
